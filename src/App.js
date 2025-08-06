@@ -69,10 +69,16 @@ function App() {
 
   return (
     <>
-      <Sidebar handleChange={handleChange} />
-      <Nav query={query} handleInputChange={handleInputChange} />
-      <Recommended handleClick={handleClick} />
-      <Products result={result} />
+      <div className="Parents">
+        <div className="sideBarContent">
+          <Sidebar handleChange={handleChange} />
+        </div>
+        <div className="productContent">
+          <Nav query={query} handleInputChange={handleInputChange} />
+          <Recommended handleClick={handleClick} />
+          <Products result={result} />
+        </div>
+      </div>
     </>
   );
 }
